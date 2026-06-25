@@ -1,44 +1,61 @@
 # Huffman Coding System
 
-A complete C++ implementation of a Huffman Coding–based data compression system, developed as part of a Programming and Data Structures lab project. The project covers encoding, decoding, optimization, and advanced variants of Huffman coding with strict correctness and complexity guarantees.
+## 📌 Overview
 
-## Features
+A complete C++ implementation of a Huffman Coding–based data compression system, developed as part of a Programming and Data Structures lab project. The project covers frequency analysis, optimal tree construction, encoding/decoding, and advanced tree counting variants.
 
-- **Frequency Table Construction** from input text
-- **Optimal Huffman Tree Construction** with precise tie-breaking rules
-- **Encoding & Decoding** of messages using prefix codes
-- **Tree Reconstruction** from codebooks and Newick format
-- **Linear-Time Huffman Tree Generation** for sorted frequencies (O(C))
-- **Counting Distinct Optimal Huffman Trees** (O(C log C))
-- **Length-Limited Huffman Coding** using the Package–Merge algorithm (O(C·D))
+Designed with strict adherence to time complexity requirements, this system evaluates different algorithmic approaches to prefix-free codes, from standard priority queues to optimized linear-time queue structures.
 
-## Commands Implemented
+---
 
-- `BuildFrequencyTable`
-- `BuildTreeFromFrequencyTable`
-- `DeriveHuffmanTree`
-- `DecodeMessage`
-- `GenerateTreeEnhanced`
-- `CountHuffmanTrees`
-- `GenerateLengthLimitedHuffman`
+## 🚀 Features
 
-## Technologies Used
+* **Frequency Table Construction:** Parses input strings and calculates character frequencies map.
+* **Optimal Huffman Tree Construction:** Builds trees using a standard minimum priority queue with precise, ID-based tie-breaking rules.
+* **Prefix Code Verification:** Reconstructs binary trees directly from existing character codebooks.
+* **Tree Parsing & Decoding:** Parses structural Newick format strings back into memory trees to decode binary message streams.
+* **Enhanced Linear-Time Generation:** Implements the two-queue algorithmic optimization to build trees when input frequencies are already sorted.
+* **Distinct Tree Combinatorics:** Mathematically computes the total number of distinct, structurally valid optimal Huffman trees possible for a given frequency distribution using modular arithmetic.
+* ---
 
-- **Language:** C++
-- **Data Structures:** Priority Queue, Queue, Hash Map, Binary Trees
-- **Algorithms:** Huffman Coding, Package–Merge Algorithm, Canonical Codes
+## 🎮 Supported Commands
 
-## Highlights
+The system reads from standard input and maps to the following execution paths:
 
-- Ensures optimal prefix codes under various constraints
-- Strict adherence to time complexity requirements
-- Supports Newick-format tree representation
-- Handles large inputs efficiently
-Author
+* `BuildFrequencyTable [string]`
+* `BuildTreeFromFrequencyTable [N] [char freq...]`
+* `DeriveHuffmanTree [N] [char binary_string...]`
+* `DecodeMessage [Newick_string] [Binary_message]`
+* `GenerateTreeEnhanced [N] [char freq...]`
+* `CountHuffmanTrees [N] [char freq...]`
 
-RISHI GOUTHAM
-IIT Madras
+---
 
+## 🛠️ Technologies Used
 
-```bash
-g++ -std=gnu++17 your_file.cpp -o huffman
+* **Language:** C++
+* **Paradigm:** Object-Oriented Tree Modeling
+* **Data Structures:** Priority Queues, Queues, Maps, Unordered Maps, Binary Tree Nodes.
+* **Algorithmic Concepts:** Greedy Algorithms, Combinatorics, Modular Exponentiation, Newick Tree Formatting.
+* ---
+
+## 📊 Compilation & Execution
+
+Compile the source code using standard GNU C++17 flags:
+
+    g++ -std=gnu++17 your_file.cpp -o huffman
+    ./huffman
+
+---
+
+## Author
+
+**RISHI GOUTHAM**
+Indian Institute of Technology (IIT) Madras
+*C++ | Systems Programming | Data Structures & Algorithms*
+
+---
+
+## License
+
+This project is created for educational and academic simulation purposes under the advanced data structures and software systems curriculum tracks.
